@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script>
+      // JavaScript for scroll animation
+      document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.animated');
+  
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+  
+        animatedElements.forEach(element => observer.observe(element));
+      });
+    </script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">👨🏻‍💻arifdnialrusli</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Achievement</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">👨🏻‍💻arifdnialrusli</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Achievement</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <section id="profile" class="animated">
+      <div class="section__pic-container">
+        <img src="./assets/ariff first.png" alt="John Doe profile picture" class="profile-pic" />
+      </div>
+      <br>
+      <br>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ariff Danial</h1>
+        <p class="section__text__p2">Information Technology</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/ariffresume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Me
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/ariff-danial-97b072298/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/arifdnial'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about" class="animated">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img src="./assets/profile pic 2.jpg" alt="Profile picture" class="about-pic" />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers horizontal-scroll">
+              <div class="details-container">
+                <div class="image-container">
+                  <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                  <div class="overlay">
+                    <div class="overlay-text">Experience Details</div>
+                  </div>
+                </div>
+                <h3>Experience</h3>
+                <p>
+                  <strong class="bold-text">Petron Panchor Jaya, Seremban - 2021</strong>
+                  <br />Cashier
+                </p>
+                <p>
+                  <strong class="bold-text">Majlis Agama Islam Negeri Sembilan (MAINS) - 2022</strong>
+                  <br />Waiter
+                </p>
+              </div>
+              
+              <div class="details-container">
+                <div class="image-container">
+                  <img src="./assets/education.png" alt="Education icon" class="icon" />
+                  <div class="overlay">
+                    <div class="overlay-text">Education Details</div>
+                  </div>
+                </div>
+                <h3>Education</h3>
+                <p>
+                  <strong class="bold-text">Sijil Pelajaran Malaysia (SPM)</strong>
+                  <br />5A - SEMENDA
+                </p>
+                <p>
+                  <strong class="bold-text">Diploma In Information Technology</strong>
+                  <br />Current CGPA- 3.76
+                </p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p><strong class="bold-text">
+I have a strong interest in STEM (Science, Technology, Engineering, and Mathematics) and a passion for developing websites and applications. These interests have shaped me into a keen problem-solver, always looking for innovative ways to address challenges.
+
+I am enthusiastic about applying my knowledge and skills in a real-world setting, contributing to meaningful projects, and continuing to grow both personally and professionally.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+      </section>
+      
+      <section id="experience" class="animated">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Achievements</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Academic Achievements</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Dean’s List Awards</h3>
+                  <p>Achieved Dean’s List for 4 consecutive semesters</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Research Projects</h3>
+                  <p>Conducted research on mobile application development for ElderGuard App/p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Honors and Awards</h3>
+                  <p>Received Bronze Certification for Final Year Project</p>
+                </div>
+              </article>
+              
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Extracurricular and Leadership Activities</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Volunteer Work</h3>
+                  <p>Facilitated computer literacy workshops for primary school students</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Leadership Roles</h3>
+                  <p>Led a team of fyp project</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Workshops and Certifications</h3>
+                  <p>Attended and completed a workshop on Advanced Flutter Development</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/ElderGuard.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">ElderGuard:Ensure Safety and Comfort for Elderly</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/arifdnial'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/arifdnial'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Bits and Bites.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Recipe Online Website:Bits and Bites</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/arifdnial'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/arifdnial'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/website.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">UTHM Online Merchandise System </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/arifdnial'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/arifdnial'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">ariffdanial053@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/ariff-danial-97b072298/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Achievement</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &copy; 2023 Ariff Danial. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
